@@ -1,0 +1,9 @@
+<div class="navbar bg-light m-2">
+  Lists Movie
+  <%= link_to 'Create list', new_list_path %>
+</div>
+<div class="container">
+  <% @lists.each do |list| %>
+    <p><%= link_to list.name, list_path(list) %></p>
+  <% end %>
+</div>
