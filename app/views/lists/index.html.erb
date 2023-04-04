@@ -5,15 +5,9 @@
 <%= cl_image_tag("zxrzuashjf7u1ea8pnyv", height: 500, width: 500, crop: :fit) %>
 <div class="container">
   <% @lists.each do |list| %>
-    <div class="card m-5" style="width: 18rem;">
       <% if list.photo.attached? %>
         <%= cl_image_tag list.photo.key, height: 500, width: 500, crop: :fit %>
       <% end %>
-      <div class="card-body">
-        <h5 class="card-title"><p><%= link_to list.name, list_path(list) %></p></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+      <h5 class="card-title"><p><%= link_to list.name, list_path(list) %></p></h5>
   <% end %>
 </div>
